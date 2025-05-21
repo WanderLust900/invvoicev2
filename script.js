@@ -20,7 +20,9 @@ function addItem() {
 }
 
 function generateReceipt() {
-  const name = document.getElementById('customerName').value;
+  const storeName = document.getElementById("storeName").value;
+const storeAddress = document.getElementById("storeAddress").value.replace(/\n/g, "<br>");
+const name = document.getElementById("customerName").value;
   const cashier = document.getElementById('cashier').value;
   const date = document.getElementById('date').value;
   const time = document.getElementById('time').value;
@@ -49,8 +51,8 @@ function generateReceipt() {
   const receiptHtml = `
     <div class="center">
       ${logoData ? `<img src="${logoData}" alt="Logo">` : ''}
-      <h3>🛒 My Store</h3>
-      <p>123 Market Road, City<br>Phone: 123-456-7890</p>
+<h3>${storeName}</h3>
+<p>${storeAddress}</p>
     </div>
     <hr>
     <table>
