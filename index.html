@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>POS Invoice Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="form">
+    <h2>Invoice Generator</h2>
+    <label>Logo: <input type="file" id="logoInput" accept="image/*"></label>
+    <label>Customer Name: <input type="text" id="customerName"></label>
+    <label>Cashier: <input type="text" id="cashier"></label>
+    <label>Date: <input type="date" id="date"></label>
+    <label>Time: <input type="time" id="time"></label>
+    
+    <h3>Items</h3>
+    <table id="itemTable">
+      <thead>
+        <tr><th>Name</th><th>Qty</th><th>Price</th><th></th></tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <button onclick="addItem()">+ Add Item</button>
+
+    <label>Tax %: <input type="number" id="tax" value="5"></label>
+    <label>Discount: <input type="number" id="discount" value="0"></label>
+
+    <button onclick="generateReceipt()">Generate Receipt</button>
+    <button onclick="downloadPDF()">Download as PDF</button>
+  </div>
+
+  <div id="receiptContainer" style="display:none;">
+    <div id="receipt"></div>
+    <button onclick="window.print()">🖨️ Print Receipt</button>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

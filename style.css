@@ -1,0 +1,53 @@
+body {
+  font-family: sans-serif;
+  padding: 20px;
+}
+
+.form {
+  max-width: 500px;
+  margin-bottom: 30px;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 6px;
+  margin-bottom: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th, table td {
+  padding: 6px;
+  font-size: 14px;
+  border-bottom: 1px solid #ccc;
+}
+
+button {
+  padding: 8px 12px;
+  margin-right: 5px;
+  margin-bottom: 10px;
+}
+
+#receipt {
+  width: 80mm;
+  padding: 10px;
+  border: 1px dashed #000;
+  font-family: monospace;
+  font-size: 12px;
+}
+
+#receipt img {
+  max-width: 300px;
+  max-height: 300px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 10px;
+}
+
+.center {
+  text-align: center;
+}
